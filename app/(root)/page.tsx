@@ -1,4 +1,11 @@
 import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
+import { faEnvelope, faGlobe } from "@fortawesome/free-solid-svg-icons";
+import {
+  faTwitter, faLinkedin, 
+} from "@fortawesome/free-brands-svg-icons";
+
 
 export default function Home() {
   return (
@@ -24,7 +31,32 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="lg:h-[10vh] bg-black w-full">socials</div>
+        <div className="flex justify-between items-center lg:h-[10vh] w-full border-t-[2px] border-b-[2px] border-[#ddd]">
+        <Link className="" href={"/"}>
+        <FontAwesomeIcon
+        icon={faTwitter}
+        className="text-4xl"
+      />
+        </Link>
+        <Link className="" href={"/"}>
+        <FontAwesomeIcon
+        icon={faLinkedin}
+        className="text-4xl"
+      />
+        </Link>
+        <Link className="" href={"/"}>
+        <FontAwesomeIcon
+        icon={faEnvelope}
+        className="text-4xl"
+      />
+        </Link>
+        <Link className="" href={"/"}>
+        <FontAwesomeIcon
+        icon={faGlobe}
+        className="text-4xl"
+      />
+        </Link>
+        </div>
       </div>
     </main>
   );

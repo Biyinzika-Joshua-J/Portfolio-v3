@@ -24,3 +24,5 @@ export default function RootLayout({
     </html>
   )
 }
+
+// https://www.figma.com/file/YE2PDrguh5fqbatL7LvpSP/Portfolio-Home-Page-Layout-Inspiration-(Community)?type=design&node-id=9-23&mode=design&t=59SnPN2O4HkRp16H-0
