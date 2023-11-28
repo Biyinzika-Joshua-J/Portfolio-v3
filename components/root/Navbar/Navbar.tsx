@@ -1,5 +1,7 @@
 import React from "react";
 import MobileNavbar from "./MobileNavbar";
+import Link from "next/link";
+import { NavbarLinks } from "@/constants/constants";
 
 const Navbar = () => {
   return (
@@ -13,7 +15,15 @@ const Navbar = () => {
                 <span className="font-extrabold text-4xl text-primary">.</span>
               </span>
             </div>
-            <div className="">Items</div>
+            <div className="">
+                {
+                    NavbarLinks.map((linkItem,idx) =>(
+                        <Link href={linkItem.route} className="capitalize ml-8" key={idx}>
+                             {linkItem.text}
+                        </Link>
+                    ))
+                }
+            </div>
           </div>
         </div>
       </nav>
