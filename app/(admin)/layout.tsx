@@ -1,12 +1,11 @@
-import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Joshua Biyinzika',
-  description: 'Frontend Engineer',
+  title: 'Admin',
+  description: 'Admin Panel',
 }
 
 export default function RootLayout({
@@ -15,8 +14,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
+    <main className="flex min-h-screen flex-col">
+        <nav>navbar admin</nav>
+        <div className='flex-1'>
+        {children}
+        </div>
+    </main>
   )
 }
