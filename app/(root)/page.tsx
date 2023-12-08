@@ -2,13 +2,10 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { faEnvelope, faGlobe } from "@fortawesome/free-solid-svg-icons";
-import {
-  faTwitter, faLinkedin, 
-} from "@fortawesome/free-brands-svg-icons";
+import { faTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import ProjectCard from "@/components/cards/ProjectCard/ProjectCard";
 import { Projects } from "@/constants/constants";
-
-
+import Icons from "@/components/skills/Icons";
 
 export default function Home() {
   return (
@@ -35,48 +32,74 @@ export default function Home() {
           </div>
         </div>
         <div className="flex justify-between items-center lg:h-[10vh] w-full border-t-[2px] border-b-[2px] border-[#ddd]">
-        <Link className="" href={"/"}>
-        <FontAwesomeIcon
-        icon={faTwitter}
-        className="text-4xl"
-      />
-        </Link>
-        <Link className="" href={"/"}>
-        <FontAwesomeIcon
-        icon={faLinkedin}
-        className="text-4xl"
-      />
-        </Link>
-        <Link className="" href={"/"}>
-        <FontAwesomeIcon
-        icon={faEnvelope}
-        className="text-4xl"
-      />
-        </Link>
-        <Link className="" href={"/"}>
-        <FontAwesomeIcon
-        icon={faGlobe}
-        className="text-4xl"
-      />
-        </Link>
+          <Link className="" href={"/"}>
+            <FontAwesomeIcon icon={faTwitter} className="text-4xl" />
+          </Link>
+          <Link className="" href={"/"}>
+            <FontAwesomeIcon icon={faLinkedin} className="text-4xl" />
+          </Link>
+          <Link className="" href={"/"}>
+            <FontAwesomeIcon icon={faEnvelope} className="text-4xl" />
+          </Link>
+          <Link className="" href={"/"}>
+            <FontAwesomeIcon icon={faGlobe} className="text-4xl" />
+          </Link>
         </div>
       </div>
 
-      <section className="py-20">
+      {/*skills section*/}
+      <section className="mt-20">
         <div className="">
-          {
-            Projects.map((Project, idx) => (
-              <ProjectCard
-                id={Project.id}
-                name={Project.name}
-                description={Project.description}
-                images={Project.images}
-                bgColor={Project.bgColor}
-              key={idx} />
-            ))
-          }
+          <div className="">
+            <h1 className="text-3xl">My Skills</h1>
+          </div>
+          <div className="">
+            <Icons />
+          </div>
         </div>
       </section>
+
+      {/*about section*/}
+      <section className="mt-20">
+        <div className="">
+          <h1 className="text-3xl font-bold">About Me</h1>
+        </div>
+        <div className="pt-6">
+          <p className="">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+            dolore doloribus quod itaque deserunt at iste aspernatur atque!
+            Neque, sint aliquid culpa pariatur ipsum possimus eligendi enim
+            officia voluptas beatae ad odit voluptatibus animi unde totam odio
+            dicta aperiam. Magnam ea culpa eius beatae nobis veritatis tempora
+            nisi? Ea vero porro maiores aut praesentium numquam cumque rem
+            impedit, nisi explicabo, voluptatum distinctio. Maiores molestiae
+            similique delectus eos ipsam accusantium architecto pariatur
+            quisquam, doloremque necessitatibus, fuga dolorem rerum
+            reprehenderit officia explicabo excepturi. Consequuntur modi dolorem
+            alias unde illum sapiente dignissimos corrupti eius. Dolor tenetur
+            architecto consequatur sapiente enim animi aperiam explicabo?
+          </p>
+        </div>
+      </section>
+
+      {/*projects section*/}
+      <section className="py-20">
+        <div className="">
+          {Projects.map((Project, idx) => (
+            <ProjectCard
+              id={Project.id}
+              name={Project.name}
+              description={Project.description}
+              images={Project.images}
+              bgColor={Project.bgColor}
+              key={idx}
+            />
+          ))}
+        </div>
+      </section>
+
+      {/*contact section*/}
+      <section className=""></section>
     </main>
   );
 }
