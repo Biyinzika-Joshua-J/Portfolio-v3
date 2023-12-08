@@ -5,6 +5,9 @@ import { faEnvelope, faGlobe } from "@fortawesome/free-solid-svg-icons";
 import {
   faTwitter, faLinkedin, 
 } from "@fortawesome/free-brands-svg-icons";
+import ProjectCard from "@/components/cards/ProjectCard/ProjectCard";
+import { Projects } from "@/constants/constants";
+
 
 
 export default function Home() {
@@ -58,6 +61,22 @@ export default function Home() {
         </Link>
         </div>
       </div>
+
+      <section className="py-20">
+        <div className="">
+          {
+            Projects.map((Project, idx) => (
+              <ProjectCard
+                id={Project.id}
+                name={Project.name}
+                description={Project.description}
+                images={Project.images}
+                bgColor={Project.bgColor}
+              key={idx} />
+            ))
+          }
+        </div>
+      </section>
     </main>
   );
 }
