@@ -1,8 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faTwitter, faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import FooterSocialIcons from "./FooterSocialIcons";
+import { Tooltip } from 'react-tooltip'
 
 const Footer = () => {
   return (
@@ -25,18 +24,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-10">
-          <Link href={"/"} className="">
-            <FontAwesomeIcon icon={faLinkedin} size="xl" className="" />
-          </Link>
-          <Link href={"/"} className="ml-4">
-            <FontAwesomeIcon icon={faTwitter} size="xl" className="ml-4" />
-          </Link>
-          <Link href={"/"} className="ml-4">
-            <FontAwesomeIcon icon={faEnvelope} size="xl" className="ml-4" />
-          </Link>
-          <Link href={"/"} className="ml-4">
-            <FontAwesomeIcon icon={faGithub} size="xl" className="ml-4" />
-          </Link>
+         <FooterSocialIcons/>
         </div>
         <div className="mt-10 md:hidden block">
               <span className="text-gray-400">© All Rights Reserved Joshua Biyinzika.</span>

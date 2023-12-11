@@ -2,14 +2,12 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import {
-  faEnvelope,
-  faGlobe,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
-import { faTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import ProjectCard from "@/components/cards/ProjectCard/ProjectCard";
 import { Projects } from "@/constants/constants";
 import Icons from "@/components/skills/Icons";
+import SocialIcons from "@/components/root/SocialIcons/SocialIcons";
 
 export default function Home() {
   return (
@@ -42,19 +40,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex justify-between items-center lg:h-[10vh] w-full border-t-[2px] border-b-[2px] border-[#ddd]">
-          <Link className="" href={"/"}>
-            <FontAwesomeIcon icon={faTwitter} className="text-4xl" />
-          </Link>
-          <Link className="" href={"/"}>
-            <FontAwesomeIcon icon={faLinkedin} className="text-4xl" />
-          </Link>
-          <Link className="" href={"/"}>
-            <FontAwesomeIcon icon={faEnvelope} className="text-4xl" />
-          </Link>
-          <Link className="" href={"/"}>
-            <FontAwesomeIcon icon={faGlobe} className="text-4xl" />
-          </Link>
+        <div>
+          <SocialIcons/>
         </div>
       </div>
 
