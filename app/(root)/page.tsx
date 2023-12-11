@@ -79,6 +79,12 @@ export default function Home() {
             architecto consequatur sapiente enim animi aperiam explicabo?
           </p>
         </div>
+        <div className="mt-10">
+        <Link className="bg-black text-white py-4 px-4 text-2xl mt-10" href={"/journey"}>
+           My Journey{" "}
+            <FontAwesomeIcon className="ml-4" icon={faArrowRight} size="lg" />
+          </Link>
+        </div>
       </section>
 
       {/*projects section*/}

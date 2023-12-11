@@ -49,7 +49,7 @@ const Navbar = () => {
             <div className="hidden lg:block">
               {NavbarLinks.map((linkItem, idx) => (
                 <Link
-                  href={linkItem.route}
+                  href={`${linkItem.route}`}
                   className="capitalize ml-8 text-2xl"
                   key={idx}
                 >
