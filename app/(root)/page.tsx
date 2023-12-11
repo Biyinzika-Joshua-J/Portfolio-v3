@@ -62,7 +62,7 @@ export default function Home() {
       <section className="mt-20">
         <div className="">
           <div className="">
-            <h1 className="text-3xl">My Skills</h1>
+            <h1 className="text-3xl font-bold">My Skills</h1>
           </div>
           <div className="">
             <Icons />

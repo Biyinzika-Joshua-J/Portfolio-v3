@@ -37,10 +37,14 @@ const Navbar = () => {
         <div className="mx-auto lg:w-[85%] w-[90%] max-w-6xl">
           <div className="flex justify-between items-center">
             <div className="">
-              <span className="text-3xl">
-                Joshua
-                <span className="font-extrabold text-4xl text-primary">.</span>
-              </span>
+              <Link href={"/"}>
+                <span className="text-3xl">
+                  Joshua
+                  <span className="font-extrabold text-4xl text-primary">
+                    .
+                  </span>
+                </span>
+              </Link>
             </div>
             <div className="hidden lg:block">
               {NavbarLinks.map((linkItem, idx) => (
