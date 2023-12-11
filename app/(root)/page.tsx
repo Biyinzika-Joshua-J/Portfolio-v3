@@ -15,9 +15,9 @@ export default function Home() {
   return (
     <main className="max-w-6xl mx-auto">
       <div className=" flex flex-col min-h-screen">
-        <div className=" flex-1">
+        <div className="flex-1">
           <div className="grid lg:grid-cols-2 grid-cols-1 lg:h-[90vh]">
-            <div className=" lg:h-[90vh] flex flex-col justify-center">
+            <div className=" lg:h-[90vh] lg:flex hidden flex-col justify-center">
               <h1 className="lg:text-6xl pb-4">Joshua Biyinzika</h1>
               <p className="text-lg line-clamp-2">
                 Frontend Developer passionate about build user interfaces <br />{" "}
@@ -32,6 +32,13 @@ export default function Home() {
                 width={200}
                 className="h-full w-full object-contain"
               />
+            </div>
+            <div className="lg:hidden text-center bg-black text-white py-4 flex flex-col justify-center">
+              <h1 className="text-4xl pb-4">Joshua Biyinzika</h1>
+              <p className="text-2xl line-clamp-2">
+                Frontend Developer passionate about build user interfaces <br />{" "}
+                that <span className="text-primary font-bold">convert</span>!
+              </p>
             </div>
           </div>
         </div>

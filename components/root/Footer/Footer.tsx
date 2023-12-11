@@ -7,7 +7,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 const Footer = () => {
   return (
     <footer className="bg-gray-200 py-10 mt-20">
-      <div className="mx-auto max-w-6xl w-[85%] flex justify-between items-center">
+      <div className="mx-auto max-w-6xl w-[85%] flex justify-between items-center md:flex-row flex-col">
         <div className="">
           <div className="">
             <span className="">
@@ -20,11 +20,11 @@ const Footer = () => {
               if you would like to work together.
             </span>
           </div>
-          <div className="mt-10">
+          <div className="mt-10 md:block hidden">
               <span className="text-gray-400">© All Rights Reserved Joshua Biyinzika.</span>
           </div>
         </div>
-        <div className="">
+        <div className="mt-10">
           <Link href={"/"} className="">
             <FontAwesomeIcon icon={faLinkedin} size="xl" className="" />
           </Link>
@@ -37,6 +37,9 @@ const Footer = () => {
           <Link href={"/"} className="ml-4">
             <FontAwesomeIcon icon={faGithub} size="xl" className="ml-4" />
           </Link>
+        </div>
+        <div className="mt-10 md:hidden block">
+              <span className="text-gray-400">© All Rights Reserved Joshua Biyinzika.</span>
         </div>
       </div>
     </footer>

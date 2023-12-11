@@ -29,27 +29,31 @@ const ProjectCard = ({ id, name, description, images, bgColor }: Props) => {
             </Link>
         </div>
       </div>
-      <div className="relative">
-        <div className={`w-full h-80`} style={{backgroundColor:bgColor}}></div>
-        <div className="absolute top-20 left-32">
-            <Image
-                src={primaryImage}
-                alt="Main image"
-                height={400}
-                width={500}
-                className="object-cover rounded-2xl"
-            />
-        </div>
-        <div className="absolute top-24 left-[60%]">
-            <Image
-                src={secondaryImage}
-                alt="secondary image"
-                height={100}
-                width={150}
-                className="object-cover rounded-2xl"
-            />
-        </div>
+      <div className="relative flex items-center justify-center">
+    <div className={`w-full h-80`} style={{ backgroundColor: bgColor }}></div>
+    <div className="flex absolute top-36 left-1/2 transform -translate-x-1/2">
+      <div className="-mt-6">
+        <Image
+            src={primaryImage}
+            alt="Main image"
+            height={500}
+            width={500}
+            className="object-cover rounded-2xl "
+        />
       </div>
+    <div className="lg:block hidden ml-4">
+        <Image
+            src={secondaryImage}
+            alt="Secondary image"
+            height={100}
+            width={150}
+            className="object-cover rounded-2xl"
+        />
+    </div>
+    </div>
+</div>
+
+
     </div>
   );
 };
