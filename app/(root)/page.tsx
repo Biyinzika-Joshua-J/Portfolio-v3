@@ -1,7 +1,11 @@
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
-import { faEnvelope, faGlobe } from "@fortawesome/free-solid-svg-icons";
+import {
+  faEnvelope,
+  faGlobe,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 import { faTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import ProjectCard from "@/components/cards/ProjectCard/ProjectCard";
 import { Projects } from "@/constants/constants";
@@ -9,7 +13,7 @@ import Icons from "@/components/skills/Icons";
 
 export default function Home() {
   return (
-    <main className="">
+    <main className="max-w-6xl mx-auto">
       <div className=" flex flex-col min-h-screen">
         <div className=" flex-1">
           <div className="grid lg:grid-cols-2 grid-cols-1 lg:h-[90vh]">
@@ -95,6 +99,12 @@ export default function Home() {
               key={idx}
             />
           ))}
+        </div>
+        <div className="pt-36 flex items-center justify-center">
+          <Link className="bg-black text-white py-2 px-4" href={"/projects"}>
+            See more Projects{" "}
+            <FontAwesomeIcon icon={faChevronRight} size="lg" />
+          </Link>
         </div>
       </section>
 

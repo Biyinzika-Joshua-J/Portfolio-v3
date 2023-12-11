@@ -34,7 +34,7 @@ const Navbar = () => {
           changeColor && "bg-black text-white"
         }`}
       >
-        <div className="mx-auto lg:w-[85%] w-[90%] ">
+        <div className="mx-auto lg:w-[85%] w-[90%] max-w-6xl">
           <div className="flex justify-between items-center">
             <div className="">
               <span className="text-3xl">
