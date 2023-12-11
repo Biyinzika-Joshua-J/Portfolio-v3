@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import {
   faChevronRight,
+  faArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
 import ProjectCard from "@/components/cards/ProjectCard/ProjectCard";
 import { Projects } from "@/constants/constants";
@@ -12,17 +13,17 @@ import SocialIcons from "@/components/root/SocialIcons/SocialIcons";
 export default function Home() {
   return (
     <main className="max-w-6xl mx-auto">
-      <div className=" flex flex-col min-h-screen">
+      <div className=" flex flex-col min-h-screen mb-36">
         <div className="flex-1">
           <div className="grid lg:grid-cols-2 grid-cols-1 lg:h-[90vh]">
             <div className=" lg:h-[90vh] lg:flex hidden flex-col justify-center">
-              <h1 className="lg:text-6xl pb-4">Joshua Biyinzika</h1>
-              <p className="text-lg line-clamp-2">
-                Frontend Developer passionate about build user interfaces <br />{" "}
+              <h1 className="lg:text-7xl pb-4">Biyinzika Joshua</h1>
+              <p className="lg:text-2xl text-gray-400">
+                Frontend Developer passionate about build user interfaces {" "}
                 that <span className="text-primary font-bold">convert</span>!
               </p>
             </div>
-            <div className=" h-[90vh]">
+            <div className=" lg:h-[90vh]">
               <Image
                 alt="Joshua smiling"
                 src={"/assets/images/joshua.png"}
@@ -32,8 +33,8 @@ export default function Home() {
               />
             </div>
             <div className="lg:hidden text-center bg-black text-white py-4 flex flex-col justify-center">
-              <h1 className="text-4xl pb-4">Joshua Biyinzika</h1>
-              <p className="text-2xl line-clamp-2">
+              <h1 className="md:text-4xl text-4xl pb-4">Biyinzika Joshua</h1>
+              <p className="text-2xl text-gray-300">
                 Frontend Developer passionate about build user interfaces <br />{" "}
                 that <span className="text-primary font-bold">convert</span>!
               </p>
@@ -46,10 +47,10 @@ export default function Home() {
       </div>
 
       {/*skills section*/}
-      <section className="mt-20">
+      <section className="my-36">
         <div className="">
           <div className="">
-            <h1 className="text-3xl font-bold">My Skills</h1>
+            <h1 className="lg:text-7xl text-6xl">My Skills</h1>
           </div>
           <div className="">
             <Icons />
@@ -58,12 +59,12 @@ export default function Home() {
       </section>
 
       {/*about section*/}
-      <section className="mt-20">
+      <section className="my-36">
         <div className="">
-          <h1 className="text-3xl font-bold">About Me</h1>
+          <h1 className="lg:text-7xl text-6xl">About Me</h1>
         </div>
         <div className="pt-6">
-          <p className="">
+          <p className="lg:text-3xl text-2xl">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
             dolore doloribus quod itaque deserunt at iste aspernatur atque!
             Neque, sint aliquid culpa pariatur ipsum possimus eligendi enim
@@ -81,7 +82,7 @@ export default function Home() {
       </section>
 
       {/*projects section*/}
-      <section className="py-20">
+      <section className="my-36">
         <div className="">
           {Projects.map((Project, idx) => (
             <ProjectCard
@@ -91,13 +92,14 @@ export default function Home() {
               images={Project.images}
               bgColor={Project.bgColor}
               key={idx}
+              index={idx}
             />
           ))}
         </div>
         <div className="pt-36 flex items-center justify-center">
-          <Link className="bg-black text-white py-2 px-4" href={"/projects"}>
+          <Link className="bg-black text-white py-4 px-4 text-2xl mt-10" href={"/projects"}>
             See more Projects{" "}
-            <FontAwesomeIcon icon={faChevronRight} size="lg" />
+            <FontAwesomeIcon className="ml-4" icon={faArrowRight} size="lg" />
           </Link>
         </div>
       </section>

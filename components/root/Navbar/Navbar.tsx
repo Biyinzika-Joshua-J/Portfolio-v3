@@ -38,7 +38,7 @@ const Navbar = () => {
           <div className="flex justify-between items-center">
             <div className="">
               <Link href={"/"}>
-                <span className="text-3xl">
+                <span className="text-3xl lg:text-5xl">
                   Joshua
                   <span className="font-extrabold text-4xl text-primary">
                     .
@@ -50,7 +50,7 @@ const Navbar = () => {
               {NavbarLinks.map((linkItem, idx) => (
                 <Link
                   href={linkItem.route}
-                  className="capitalize ml-8"
+                  className="capitalize ml-8 text-2xl"
                   key={idx}
                 >
                   {linkItem.text}

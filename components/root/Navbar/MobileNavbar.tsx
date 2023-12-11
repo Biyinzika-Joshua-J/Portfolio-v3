@@ -28,9 +28,8 @@ const MobileNavbar = ({ open, setOpen }:Props<boolean>) => {
       <ul className="text-center">
         {
           NavbarLinks.map((link, idx) => (
-            <li className="my-8 text-3xl text-white font-bold">
+            <li key={idx} className="my-8 text-3xl text-white font-bold">
             <Link
-              key={idx}
               onClick={() => setOpen(false)}
               className="transition-all duration-200 ease-in-out hover:text-[#f38039]"
               href={`${link.route}`}

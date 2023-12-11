@@ -18,6 +18,7 @@ const page = () => {
               images={Project.images}
               bgColor={Project.bgColor}
               key={idx}
+              index={idx}
             />
           ))}
           </div>

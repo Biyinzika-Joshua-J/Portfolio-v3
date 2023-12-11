@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="mx-auto max-w-6xl w-[85%] flex justify-between items-center md:flex-row flex-col">
         <div className="">
           <div className="">
-            <span className="">
+            <span className="lg:text-2xl text-xl">
               I'm currently available to work on a new project. <br/> Kindly{" "}
               <span className="text-indigo-700">
                 <Link href={"mailto:joshuabiyinzika22@gmail.com"}>
@@ -19,15 +19,15 @@ const Footer = () => {
               if you would like to work together.
             </span>
           </div>
-          <div className="mt-10 md:block hidden">
-              <span className="text-gray-400">© All Rights Reserved Joshua Biyinzika.</span>
+          <div className="mt-10 md:block hidden ">
+              <span className="text-gray-400 text-lg">© All Rights Reserved Joshua Biyinzika.</span>
           </div>
         </div>
         <div className="mt-10">
          <FooterSocialIcons/>
         </div>
-        <div className="mt-10 md:hidden block">
-              <span className="text-gray-400">© All Rights Reserved Joshua Biyinzika.</span>
+        <div className="mt-10 md:hidden block ">
+              <span className="text-gray-400 text-lg">© All Rights Reserved Joshua Biyinzika.</span>
         </div>
       </div>
     </footer>

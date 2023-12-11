@@ -10,34 +10,38 @@ interface Props {
   description: string;
   images: string[];
   bgColor: string;
+  index : number;
 }
 
-const ProjectCard = ({ id, name, description, images, bgColor }: Props) => {
+const ProjectCard = ({ id, name, description, images, bgColor, index }: Props) => {
   const [primaryImage, secondaryImage] = images;
 
   return (
-    <div className="mt-40">
+    <div key={id} className={`${index===0?'mt-0':'mt-52'}`}>
       <div className="">
-        <h1 className="text-3xl font-bold pb-6">{name}</h1>
-        <p className="w-[50%] line-clamp-3 pb-6">
+        <h1 className="lg:text-7xl text-6xl pb-6">{name}</h1>
+        <p className="md:w-[50%] w-[90%]  pb-6 lg:text-3xl text-2xl">
             {description}
         </p>
         <div className="pb-6">
             <Link href={"/"} className="">
                 <FontAwesomeIcon icon={faChevronRight} size="lg"/>
-                <span className="ml-6">View Project</span>
+                <span className="ml-6 text-2xl">View Project</span>
+            </Link>
+            <Link href={"/"} className="">
+                <span className="ml-6 text-2xl">View Details</span>
             </Link>
         </div>
       </div>
       <div className="relative flex items-center justify-center">
-    <div className={`w-full h-80`} style={{ backgroundColor: bgColor }}></div>
-    <div className="flex absolute top-36 left-1/2 transform -translate-x-1/2">
-      <div className="-mt-6">
+    <div className={`w-full h-80 hidden md:flex `} style={{ backgroundColor: bgColor }} ></div>
+    <div className="hidden md:flex absolute top-36 left-1/2 transform -translate-x-1/2">
+      <div className="-mt-2 ">
         <Image
             src={primaryImage}
             alt="Main image"
-            height={500}
-            width={500}
+            height={1000}
+            width={1000}
             className="object-cover rounded-2xl "
         />
       </div>
@@ -46,10 +50,19 @@ const ProjectCard = ({ id, name, description, images, bgColor }: Props) => {
             src={secondaryImage}
             alt="Secondary image"
             height={100}
-            width={150}
+            width={350}
             className="object-cover rounded-2xl"
         />
     </div>
+    </div>
+    <div className="md:hidden block">
+    <Image
+            src={primaryImage}
+            alt="Main image"
+            height={1000}
+            width={1000}
+            className="object-cover rounded-2xl "
+        />
     </div>
 </div>
 
