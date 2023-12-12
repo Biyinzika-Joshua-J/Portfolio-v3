@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image';
+import ProjectSlider from '@/components/projectSlider/ProjectSlider';
 
 interface Props{
   params : any;
@@ -72,7 +73,7 @@ const Project = ({params}:Props) => {
               <h2 className="lg:text-7xl text-6xl">Screenshots and Demos</h2>
           </div>
           <div className="py-4">
-              content
+              <ProjectSlider/>
           </div>
         </div>
         <div className="my-10">
