@@ -2,7 +2,9 @@ import React from 'react'
 import ProjectCard from '@/components/cards/ProjectCard/ProjectCard'
 import { Projects } from '@/constants/constants'
 
+
 const page = () => {
+  
   return (
     <main className="max-w-6xl mx-auto">
         <div className="my-20">
