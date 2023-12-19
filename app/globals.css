@@ -11,3 +11,8 @@
 body {
  
 }
+
+.vertical-timeline-element-date{
+    color: #000;
+    font-weight: bold;
+}

@@ -5,8 +5,10 @@ import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
+import SvgIcons from "@/components/icons/SvgIcons";
 
-import 'react-vertical-timeline-component/style.min.css';
+import "react-vertical-timeline-component/style.min.css";
+import Image from "next/image";
 
 const WorkIcon = () => {
   return (
@@ -40,81 +42,120 @@ const StarIcon = () => {
 };
 
 const events = [
-    {
-      date: '2022-01-01',
-      title: 'Event 1',
-      description: 'Description for Event 1',
-    },
-    {
-      date: '2022-02-01',
-      title: 'Event 2',
-      description: 'Description for Event 2',
-    },
-    {
-      date: '2022-02-01',
-      title: 'Event 2',
-      description: 'Description for Event 2',
-    },
-    {
-      date: '2022-02-01',
-      title: 'Event 2',
-      description: 'Description for Event 2',
-    },
-    {
-      date: '2022-02-01',
-      title: 'Event 2',
-      description: 'Description for Event 2',
-    },
-    {
-      date: '2022-02-01',
-      title: 'Event 2',
-      description: 'Description for Event 2',
-    },
-    {
-      date: '2022-02-01',
-      title: 'Event 2',
-      description: 'Description for Event 2',
-    },
-    {
-      date: '2022-02-01',
-      title: 'Event 2',
-      description: 'Description for Event 2',
-    },
-    {
-      date: '2022-02-01',
-      title: 'Event 2',
-      description: 'Description for Event 2',
-    },
-    {
-      date: '2022-02-01',
-      title: 'Event 2',
-      description: 'Description for Event 2',
-    },
-    // Add more events as needed
-  ];
+  {
+    "date": "March 2020",
+    "title": "I Started Learning C",
+    "description": "Embarked on the challenging journey of learning C. It got tough, and I hit pause for a bit."
+  },
+  {
+    "date": "May 2020",
+    "title": "Switching to HTML, CSS, and JS",
+    "description": "Resumed the coding adventure, but this time switched gears to HTML, CSS, and JS. The catch? No computer! I coded on my trusty Samsung tablet, building pages and proving that we all start somewhere."
+  },
+  {
+    "date": "June 2020",
+    "title": "Got a Real Computer!",
+    "description": "Finally bid farewell to the tablet and welcomed a real computer into my life. Coding on a tablet? Let's just say it sucks!"
+  },
+  {
+    "date": "August 2020",
+    "title": "First Freelance Gig",
+    "description": "Celebrated my first freelance gig! Crafted a website for one of my Aunties' craft shoe shop. The euphoria of putting something on the internet was unforgettable, even if looking back makes me cringe a bit."
+  },
+  {
+    "date": "November 2020",
+    "title": "Joining Upwork",
+    "description": "Launched an Upwork account after eight months of honing my skills. Getting a slice of the freelance pie on Upwork was no walk in the park!"
+  },
+  {
+    "date": "February 2021",
+    "title": "First Freelance Client",
+    "description": "Scored my first freelance client. The joy was unparalleled, but the reality hit hard—I was about to build a full-stack app without a clue about client-server architecture. Uff!"
+  },
+  {
+    "date": "September 2021",
+    "title": "End of Freelance Contract",
+    "description": "End of my baptism-by-fire freelance contract. Grueling months of 10-hour days, Monday to Sunday. I consider it my initiation into the industry by fire."
+  },
+  {
+    "date": "October 2021",
+    "title": "Diving into React and Next JS",
+    "description": "Dived into React and Next JS. Invested part of my earnings into courses after a 2000-line Vanilla JS file in a previous freelance gig made me wonder why I hadn't discovered React earlier."
+  },
+  {
+    "date": "January 2022",
+    "title": "Continued Freelance Work",
+    "description": "Continued freelance work, this time collaborating with local businesses. Learned the art of being a good communicator, explaining technical concepts to clients effectively."
+  },
+  {
+    "date": "March 2022",
+    "title": "Exploring Shopify Development",
+    "description": "Explored Shopify development to ride the wave of drop-shipping. Learned the importance of committing to a single thing and becoming exceptionally good at it."
+  },
+  {
+    "date": "August 2022",
+    "title": "Starting a Blog",
+    "description": "Launched my blog - soarwithcode.com. Realized the power of sharing knowledge and experiences. Consistency? Well, still getting my act together - don't judge me!"
+  },
+  {
+    "date": "October 2022",
+    "title": "Joining the University of London",
+    "description": "Joined the University of London. A life-changing decision, contrary to my previous resistance to the idea of Uni."
+  },
+  {
+    "date": "November 2022",
+    "title": "Bible College Graduation",
+    "description": "Graduated from Bible college. Thankful for the two years of studying biblical studies."
+  },
+  {
+    "date": "April 2023",
+    "title": "First Internship",
+    "description": "Kicked off my first internship, coding 10 solid hours a day, six days a week. Crazy hard, but I grew to love it."
+  },
+  {
+    "date": "June 2023",
+    "title": "Another Internship",
+    "description": "Another internship, arranged by my Uni. It emphasized the importance of clear communication, even if the technical work wasn't the primary focus."
+  },
+  {
+    "date": "July 2023",
+    "title": "Volunteering as a Frontend Developer",
+    "description": "Started volunteering as a Frontend developer for 8billionminds, a company aiming to connect the globe through knowledge. Because sometimes, life isn't just about the exchange of time and money—it's about volunteering!"
+  },
+  {
+    "date": "August 2023",
+    "title": "Another Freelance Contract",
+    "description": "Signed another freelance contract, this time determined not to repeat past mistakes. Building a forex website, a fullstack app for learning about forex trading and accessing live trade breakdowns."
+  }
+]
+
 
 const page = () => {
   return (
     <main className="mt-20 max-w-6xl mx-auto">
-        <div className="w-full  bg-gray-200">
+      <div className="w-full  bg-gray-200">
         <VerticalTimeline animate={true} animateDirection="bottom">
-      {events.map((event, index) => (
-        <VerticalTimelineElement
-        visible={true}
-          key={index}
-          date={event.date}
-          iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-          animate={true}
-          animation={"fade-in"}
-          contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-          contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-        >
-          <h3 className="vertical-timeline-element-title">{event.title}</h3>
-          <p>{event.description}</p>
-        </VerticalTimelineElement>
-      ))}
-    </VerticalTimeline>
-        </div>
+          {events.map((event, index) => (
+            <VerticalTimelineElement
+              icon={<SvgIcons/>}
+              visible={true}
+              key={index}
+              date={event.date}
+              iconStyle={{ background: "rgb(162,255,134)", color: "#fff" }}
+              animate={true}
+              animation={"fade-in"}
+              contentStyle={{ background: "rgb(0, 0, 0)", color: "#fff" }}
+              contentArrowStyle={{
+                borderRight: "7px solid  rgb(0, 0, 0)",
+              }}
+            >
+              <h3 className="vertical-timeline-element-title font-bold">{event.title}</h3>
+              <p className="text-gray-300">{event.description}</p>
+             
+            </VerticalTimelineElement>
+          ))}
+        </VerticalTimeline>
+      </div>
     </main>
   );
 };
