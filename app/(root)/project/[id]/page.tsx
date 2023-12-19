@@ -60,14 +60,7 @@ const Project = ({params}:Props) => {
               content
           </div>
         </div>
-        <div className="my-10">
-          <div className="">
-              <h2 className="lg:text-7xl text-6xl">Code Snippets</h2>
-          </div>
-          <div className="py-4">
-              content
-          </div>
-        </div>
+       
         <div className="my-10">
           <div className="">
               <h2 className="lg:text-7xl text-6xl">Screenshots and Demos</h2>
@@ -92,22 +85,7 @@ const Project = ({params}:Props) => {
               content
           </div>
         </div>
-        <div className="my-10">
-          <div className="">
-              <h2 className="lg:text-7xl text-6xl">Impact</h2>
-          </div>
-          <div className="py-4">
-              content
-          </div>
-        </div>
-        <div className="my-10">
-          <div className="">
-              <h2 className="lg:text-7xl text-6xl">Future Enhancements</h2>
-          </div>
-          <div className="py-4">
-              content
-          </div>
-        </div>
+        
         <div className="my-10">
           <div className="">
               <h2 className="lg:text-7xl text-6xl">Lessons Learned</h2>

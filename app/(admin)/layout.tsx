@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <main className="flex min-h-screen flex-col">
-        <nav>navbar admin</nav>
+        <nav className='bg-black px-4 py-4 text-white'>Admin</nav>
         <div className='flex-1'>
         {children}
         </div>

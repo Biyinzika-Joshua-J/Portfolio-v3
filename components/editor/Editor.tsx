@@ -37,7 +37,11 @@ const formats = ["header","bold","italic","underline","strike","blockquote",
     },
   }
 
-const Editor = () => {
+interface Props {
+  label ?:string;
+}
+
+const Editor = ({label}:Props) => {
   // Editor state
   const [value, setValue] = useState("");
 
@@ -48,7 +52,7 @@ const Editor = () => {
 
   return (
     <div className="">
-      <label className="">Editor Content</label>
+      <label className="font-bold  mb-2">{label}</label>
       <QuillEditor
         className=""
         theme="snow"
@@ -57,9 +61,11 @@ const Editor = () => {
         formats={formats}
         modules={modules}
       />
-       <button onClick={handler} className="">
-        Submit
-      </button>
+      
+      
+      {/*<div className="" dangerouslySetInnerHTML={{__html:value}}>*/}
+
+    
     </div>
   );
 };
