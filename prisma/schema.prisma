@@ -1,0 +1,31 @@
+// schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+}
+
+model PortfolioProject {
+  id          Int      @id @default(autoincrement())
+  title       String
+  hexCode     String   
+  description String
+  projectLink String
+  mainImageLink String
+  secondaryImageLink String
+  overview    String
+  features    String
+  techStack   String
+  challengesAndSolutions String
+  screenShot1Link String
+  screenShot2Link String
+  screenShot3Link String
+  userExperience String
+  projectLinks String
+  lessonsLearned String
+}
