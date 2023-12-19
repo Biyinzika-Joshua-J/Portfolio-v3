@@ -46,3 +46,7 @@ export async function getProjectDetails(id:string){
         await prisma.$disconnect();
     }
 }
+
+export async function deleteProject(id:string){
+ // ...
+}

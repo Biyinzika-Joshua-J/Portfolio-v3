@@ -39,15 +39,17 @@ const formats = ["header","bold","italic","underline","strike","blockquote",
 
 interface Props {
   label ?:string;
+  editorValue?: string;
+  valueHandler?:any;
 }
 
-const Editor = ({label}:Props) => {
+const Editor = ({label,editorValue, valueHandler}:Props) => {
   // Editor state
   const [value, setValue] = useState("");
 
   // Handler to handle button clicked
   function handler() {
-    console.log(value);
+    //console.log(value);
   }
 
   return (
@@ -56,8 +58,8 @@ const Editor = ({label}:Props) => {
       <QuillEditor
         className=""
         theme="snow"
-        value={value}
-        onChange={(value) => setValue(value)}
+        value={editorValue}
+        onChange={(currValue) => valueHandler(currValue)}
         formats={formats}
         modules={modules}
       />

@@ -1,5 +1,5 @@
 export interface PortfolioProjectInterface {
-    id: number;
+    id?: number;
     title: string;
     hexCode: string;
     description: string;
