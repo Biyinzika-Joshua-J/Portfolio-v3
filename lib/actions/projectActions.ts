@@ -49,7 +49,7 @@ export async function getProjectDetails(id:string){
 
 export async function deleteProject(id:string){
   try {
-    const deleteUser = await prisma.portfolioProject.delete({
+    const deletProject = await prisma.portfolioProject.delete({
         where: {
           id: parseInt(id),
         },
@@ -59,6 +59,29 @@ export async function deleteProject(id:string){
     console.log("Could not delete this project!", error);
     return false;
   }finally{
+    await prisma.$disconnect();
+  }
+}
+
+export async function updateProject(id: string, updatedProjectData: PortfolioProjectInterface) {
+  try {
+    const updatedProject = await prisma.portfolioProject.update({
+      where: {
+        id: parseInt(id),
+      },
+      data: updatedProjectData,
+    });
+
+    if (!updatedProject) {
+      console.error("Project not found for update");
+      return false;
+    }
+
+    return true;
+  } catch (error) {
+    console.error("Error updating portfolio project:", error);
+    return false;
+  } finally {
     await prisma.$disconnect();
   }
 }
