@@ -10,6 +10,9 @@ datasource db {
   directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
 }
 
+
+// to make the id uuid
+// id                    String    @id @default(auto()) @db.UUID
 model PortfolioProject {
   id          Int      @id @default(autoincrement())
   title       String

@@ -1,6 +1,8 @@
-import React from 'react'
+"use client"
+import React, {useState, useEffect} from 'react'
 import Image from 'next/image';
 import ProjectSlider from '@/components/projectSlider/ProjectSlider';
+import { getProjectDetails } from '@/lib/actions/projectActions';
 
 interface Props{
   params : any;
@@ -8,9 +10,26 @@ interface Props{
 
 const Project = ({params}:Props) => {
   const {id:ProjectId} = params;
+  const [contentDetails, setContentDetails] = useState(null);
+
+ useEffect(()=>{
+  async function projectDetails(id:string){
+    try {
+      const details:any = await getProjectDetails(id);
+      setContentDetails(details);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  projectDetails(ProjectId);
+ }, []);
+
+ console.log(contentDetails)
 
   return (
-    <main className='max-w-6xl mx-auto mt-20'>
+    <div>
+      {contentDetails == null && <div>Loading....</div>}
+    {contentDetails != null && <main className='max-w-6xl mx-auto mt-20'>
       <section className="h-60 w-full relative mb-20">
         <div className="h-full w-full">
             <Image
@@ -32,32 +51,32 @@ const Project = ({params}:Props) => {
           <div className="">
               <h2 className="lg:text-7xl text-6xl">Overview</h2>
           </div>
-          <div className="py-4">
-              content
+          <div className="py-4" dangerouslySetInnerHTML={{__html:contentDetails.overview}}>
+              
           </div>
         </div>
         <div className="my-10">
           <div className="">
               <h2 className="lg:text-7xl text-6xl">Features</h2>
           </div>
-          <div className="py-4">
-              content
+          <div className="py-4" dangerouslySetInnerHTML={{__html:contentDetails.features}}>
+              
           </div>
         </div>
         <div className="my-10">
           <div className="">
               <h2 className="lg:text-7xl text-6xl">Tech Stack</h2>
           </div>
-          <div className="py-4">
-              content
+          <div className="py-4"  dangerouslySetInnerHTML={{__html:contentDetails.techStack}}>
+              
           </div>
         </div>
         <div className="my-10">
           <div className="">
               <h2 className="lg:text-7xl text-6xl">Challenges and Solutions</h2>
           </div>
-          <div className="py-4">
-              content
+          <div className="py-4" dangerouslySetInnerHTML={{__html:contentDetails.challengesAndSolutions}}>
+              
           </div>
         </div>
        
@@ -73,16 +92,16 @@ const Project = ({params}:Props) => {
           <div className="">
               <h2 className="lg:text-7xl text-6xl">User Experience</h2>
           </div>
-          <div className="py-4">
-              content
+          <div className="py-4" dangerouslySetInnerHTML={{__html:contentDetails.userExperience}}>
+              
           </div>
         </div>
         <div className="my-10">
           <div className="">
               <h2 className="lg:text-7xl text-6xl">Project Links</h2>
           </div>
-          <div className="py-4">
-              content
+          <div className="py-4" dangerouslySetInnerHTML={{__html:contentDetails.projectLinks}}>
+              
           </div>
         </div>
         
@@ -90,13 +109,14 @@ const Project = ({params}:Props) => {
           <div className="">
               <h2 className="lg:text-7xl text-6xl">Lessons Learned</h2>
           </div>
-          <div className="py-4">
-              content
+          <div className="py-4" dangerouslySetInnerHTML={{__html:contentDetails.lessonsLearned}}>
+              
           </div>
         </div>
       
       </section>
-    </main>
+    </main>}
+    </div>
   )
 }
 

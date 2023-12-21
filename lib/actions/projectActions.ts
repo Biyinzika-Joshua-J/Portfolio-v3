@@ -48,5 +48,17 @@ export async function getProjectDetails(id:string){
 }
 
 export async function deleteProject(id:string){
- // ...
+  try {
+    const deleteUser = await prisma.portfolioProject.delete({
+        where: {
+          id: parseInt(id),
+        },
+      })
+      return true;
+  } catch (error) {
+    console.log("Could not delete this project!", error);
+    return false;
+  }finally{
+    await prisma.$disconnect();
+  }
 }

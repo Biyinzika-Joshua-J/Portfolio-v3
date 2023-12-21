@@ -29,7 +29,7 @@ export default function Home() {
                 src={"/assets/images/joshua.png"}
                 height={200}
                 width={200}
-                className="h-full w-full object-contain"
+                className="h-1/2 w-1/2 rounded-full object-contain"
               />
             </div>
             <div className="lg:hidden text-center bg-black text-white py-4 flex flex-col justify-center">

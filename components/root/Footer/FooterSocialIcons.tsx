@@ -10,19 +10,19 @@ import { Tooltip } from 'react-tooltip';
 const FooterSocialIcons = () => {
   return (
     <>
-         <Link href={"/"} className="" data-tooltip-id="linkedin" data-tooltip-content="Linkedin">
+         <Link target='__blank' href={"https://www.linkedin.com/in/biyinzika-joshua-j/"} className="" data-tooltip-id="linkedin" data-tooltip-content="Linkedin">
             <Tooltip id="linkedin" />
             <FontAwesomeIcon icon={faLinkedin} size="xl" className="" />
           </Link>
-          <Link href={"/"} className="ml-4" data-tooltip-id="twitter" data-tooltip-content="Twitter">
+          <Link target='__blank' href={"https://twitter.com/JoshJosephB"} className="ml-4" data-tooltip-id="twitter" data-tooltip-content="Twitter">
           <Tooltip id="twitter" />
             <FontAwesomeIcon icon={faTwitter} size="xl" className="ml-4" />
           </Link>
-          <Link href={"/"} className="ml-4" data-tooltip-id="email" data-tooltip-content="Email">
+          <Link target='__blank' href={"mailto:joshuabiyinzika22@gmail.com"} className="ml-4" data-tooltip-id="email" data-tooltip-content="Email">
           <Tooltip id="email" />
             <FontAwesomeIcon icon={faEnvelope} size="xl" className="ml-4" />
           </Link>
-          <Link href={"/"} className="ml-4" data-tooltip-id="github" data-tooltip-content="My Github">
+          <Link target='__blank' href={"https://github.com/Biyinzika-Joshua-J"} className="ml-4" data-tooltip-id="github" data-tooltip-content="My Github">
           <Tooltip id="github" />
             <FontAwesomeIcon icon={faGithub} size="xl" className="ml-4" />
           </Link>
