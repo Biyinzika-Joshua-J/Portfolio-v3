@@ -60,7 +60,7 @@ const page = () => {
                   </div>
                   <div className="mr-4">
                     <Link
-                      href={`/admin/edit/${project.id}`}
+                      href={`/admin/edit-project/${project.id}`}
                       className="bg-black text-white py-2 px-4"
                     >
                       <FontAwesomeIcon icon={faPenToSquare} size="xl" />
