@@ -48,7 +48,7 @@ export default function Home() {
       </div>
 
       {/*skills section*/}
-      <section className="my-36">
+      <section className="my-36" id="skills">
         <div className="">
           <div className="">
             <h1 className="lg:text-7xl text-6xl">My Skills</h1>
@@ -60,7 +60,7 @@ export default function Home() {
       </section>
 
       {/*about section*/}
-      <section className="my-36">
+      <section className="my-36" id="about">
         <div className="">
           <h1 className="lg:text-7xl text-6xl">About Me</h1>
         </div>
@@ -89,7 +89,7 @@ export default function Home() {
       </section>
 
       {/*projects section*/}
-      <section className="my-36">
+      <section className="my-36" id="projects">
         <div className="">
          <ProjectsList count={3} />
         </div>

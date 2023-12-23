@@ -3,16 +3,16 @@
 @tailwind utilities;
 
 :root {
- 
 }
 
-
+html {
+  scroll-behavior: smooth;
+}
 
 body {
- 
 }
 
-.vertical-timeline-element-date{
-    color: #000;
-    font-weight: bold;
+.vertical-timeline-element-date {
+  color: #000;
+  font-weight: bold;
 }
