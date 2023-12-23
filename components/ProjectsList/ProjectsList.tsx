@@ -2,6 +2,7 @@
 import React, {useState, useEffect} from 'react'
 import ProjectCard from '../cards/ProjectCard/ProjectCard';
 import { getProjects } from '@/lib/actions/projectActions';
+import Loader from '../loader/Loader';
 
 interface Props{
     count ?: number;
@@ -30,9 +31,7 @@ const ProjectsList = ({count}:Props) => {
   return (
     <div>
            {projects === null && (
-            <div className="text-center flex items-center justify-center h-96 w-full">
-              <span className="font-bold text-lg">Loading....</span>
-            </div>
+            <Loader/>
           )}
            {projects && projects.map((Project, idx) => (
             <ProjectCard

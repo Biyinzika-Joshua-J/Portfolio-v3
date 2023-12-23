@@ -3,6 +3,8 @@ import React, {useState, useEffect} from 'react'
 import Image from 'next/image';
 import ProjectSlider from '@/components/projectSlider/ProjectSlider';
 import { getProjectDetails } from '@/lib/actions/projectActions';
+import Loader from '@/components/loader/Loader';
+import './styles.css';
 
 interface Props{
   params : any;
@@ -31,9 +33,9 @@ const Project = ({params}:Props) => {
 
   return (
     <div>
-      {contentDetails == null && <div>Loading....</div>}
+      {contentDetails == null &&  <Loader/>}
     {contentDetails != null && <main className='max-w-6xl mx-auto mt-20'>
-      <section className="h-60 w-full relative mb-20">
+      <section className="project-details h-60 w-full relative mb-20">
         <div className="h-full w-full">
             <Image
               src={contentDetails.mainImageLink}

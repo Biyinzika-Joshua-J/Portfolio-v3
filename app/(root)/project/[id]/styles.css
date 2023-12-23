@@ -1,0 +1,27 @@
+h1, h2, h3, h4, h5, h6{
+    font-size: 20px;
+    padding: .5rem 0 .5rem 0;
+}
+
+p{
+    font-size: 16px;
+    font-weight: normal;
+    line-height: normal;
+}
+
+ul {
+    list-style-type: circle; /* You can change 'square' to 'disc', 'circle', etc. */
+    color: black; 
+  }
+
+  
+  ol {
+    list-style-type: decimal; /* You can change 'decimal' to 'lower-roman', 'upper-roman', etc. */
+    color: black;
+  }
+
+ 
+  li {
+    margin: 5px 0; 
+  }
+

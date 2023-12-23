@@ -18,7 +18,7 @@ import Image from 'next/image';
 
 const ProjectSlider = ({images}:{images:any}) => {
   return (
-    <div className='h-96 w-full overflow-x-hidden'>
+    <div className='h-screen w-full overflow-x-hidden'>
       <Swiper
         cssMode={true}
         navigation={true}
