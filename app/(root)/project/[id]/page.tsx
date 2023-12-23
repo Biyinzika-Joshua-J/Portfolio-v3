@@ -11,12 +11,15 @@ interface Props{
 const Project = ({params}:Props) => {
   const {id:ProjectId} = params;
   const [contentDetails, setContentDetails] = useState(null);
+  const [sliderImages, setSliderImages] = useState([])
 
  useEffect(()=>{
   async function projectDetails(id:string){
     try {
       const details:any = await getProjectDetails(id);
       setContentDetails(details);
+      const {screenShot1Link, screenShot2Link, screenShot3Link} = details;
+      setSliderImages([screenShot1Link, screenShot2Link, screenShot3Link])
     } catch (error) {
       console.log(error);
     }
@@ -33,7 +36,7 @@ const Project = ({params}:Props) => {
       <section className="h-60 w-full relative mb-20">
         <div className="h-full w-full">
             <Image
-              src={'/assets/images/desktop.png'}
+              src={contentDetails.mainImageLink}
               alt='header image'
               width={1000}
               height={500}
@@ -43,7 +46,7 @@ const Project = ({params}:Props) => {
         <div className="absolute top-0 left-0 w-full h-full opacity-30 bg-black">
         </div>
         <div className="absolute top-0 left-0 w-full flex h-full justify-center items-center">
-          <h1 className="text-7xl font-bold text-white">Movilla</h1>
+          <h1 className="text-7xl font-bold text-white">{contentDetails.title}</h1>
         </div>
       </section>
       <section className="">
@@ -85,7 +88,7 @@ const Project = ({params}:Props) => {
               <h2 className="lg:text-7xl text-6xl">Screenshots and Demos</h2>
           </div>
           <div className="py-4">
-              <ProjectSlider/>
+              <ProjectSlider images={sliderImages}/>
           </div>
         </div>
         <div className="my-10">

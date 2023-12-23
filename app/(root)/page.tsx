@@ -9,6 +9,7 @@ import ProjectCard from "@/components/cards/ProjectCard/ProjectCard";
 import { Projects } from "@/constants/constants";
 import Icons from "@/components/skills/Icons";
 import SocialIcons from "@/components/root/SocialIcons/SocialIcons";
+import ProjectsList from "@/components/ProjectsList/ProjectsList";
 
 export default function Home() {
   return (
@@ -90,17 +91,7 @@ export default function Home() {
       {/*projects section*/}
       <section className="my-36">
         <div className="">
-          {Projects.map((Project, idx) => (
-            <ProjectCard
-              id={Project.id}
-              name={Project.name}
-              description={Project.description}
-              images={Project.images}
-              bgColor={Project.bgColor}
-              key={idx}
-              index={idx}
-            />
-          ))}
+         <ProjectsList count={3} />
         </div>
         <div className="pt-36 flex items-center justify-center">
           <Link className="bg-black text-white py-4 px-4 text-2xl mt-10" href={"/projects"}>

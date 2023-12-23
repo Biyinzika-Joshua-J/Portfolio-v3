@@ -1,6 +1,7 @@
 import React from 'react'
 import ProjectCard from '@/components/cards/ProjectCard/ProjectCard'
 import { Projects } from '@/constants/constants'
+import ProjectsList from '@/components/ProjectsList/ProjectsList'
 
 
 const page = () => {
@@ -12,17 +13,7 @@ const page = () => {
             <h1 className="text-3xl font-bold">All Projects</h1>
           </div>
           <div className="">
-          {Projects.map((Project, idx) => (
-            <ProjectCard
-              id={Project.id}
-              name={Project.name}
-              description={Project.description}
-              images={Project.images}
-              bgColor={Project.bgColor}
-              key={idx}
-              index={idx}
-            />
-          ))}
+          <ProjectsList  />
           </div>
         </div>
     </main>

@@ -11,9 +11,10 @@ interface Props {
   images: string[];
   bgColor: string;
   index : number;
+  liveLink : string;
 }
 
-const ProjectCard = ({ id, name, description, images, bgColor, index }: Props) => {
+const ProjectCard = ({ id, name, description, images, bgColor, index, liveLink }: Props) => {
   const [primaryImage, secondaryImage] = images;
 
   return (
@@ -24,11 +25,11 @@ const ProjectCard = ({ id, name, description, images, bgColor, index }: Props) =
             {description}
         </p>
         <div className="pb-6">
-            <Link href={"/"} className="">
+            <Link target="__blank" href={liveLink} className="">
                 <FontAwesomeIcon icon={faChevronRight} size="lg"/>
                 <span className="ml-6 text-2xl">View Project</span>
             </Link>
-            <Link href={"/"} className="">
+            <Link target="__blank" href={`/project/${id}`} className="">
                 <span className="ml-6 text-2xl">View Details</span>
             </Link>
         </div>
