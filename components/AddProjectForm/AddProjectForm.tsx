@@ -1,4 +1,3 @@
-// @ts-nocheck
 "use client"
 import React, {useState, useEffect} from 'react'
 import Editor from '../editor/Editor'
@@ -25,7 +24,7 @@ const AddProjectForm = () => {
 
  // submit handler 
  async function submitProjectData(){
-    const data = {title,hexCode, description, projectLink, mainImageLink, secondaryImageLink, overview, features, techStack, challengesAndSolutions, screenShot1Link, screenShot2Link, screenShot3Link,userExperience,projectLinks,lessonsLearned}
+    const data:any = {title,hexCode, description, projectLink, mainImageLink, secondaryImageLink, overview, features, techStack, challengesAndSolutions, screenShot1Link, screenShot2Link, screenShot3Link,userExperience,projectLinks,lessonsLearned}
     for (const obj in data){
         if(data[obj] === "") return;
     }
@@ -49,7 +48,7 @@ const AddProjectForm = () => {
             <input value={hexCode} onChange={(e)=>setHexCode(e.target.value)} className='border-2 border-black p-4 w-full my-4' type="text" name="Hex-code-color" id="Hex-code-color" placeholder='Hex code color'/>
         </div>
         <div className="">
-            <textarea value={description} onChange={(e)=>setDescription(e.target.value)}  className='border-2 border-black p-4 w-full my-4' name="description" id="description" placeholder='Description' cols="30" rows="10"></textarea>
+            <textarea value={description} onChange={(e)=>setDescription(e.target.value)}  className='border-2 border-black p-4 w-full my-4' name="description" id="description" placeholder='Description' cols={30} rows={10}></textarea>
         </div>
         <div className="">
             <input value={projectLink} onChange={(e)=>setProjectLink(e.target.value)}  className='border-2 border-black p-4 w-full my-4' type="text" name="project-link" id="project-link" placeholder='Project Link'/>
