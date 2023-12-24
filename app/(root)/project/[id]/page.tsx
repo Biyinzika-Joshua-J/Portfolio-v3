@@ -1,4 +1,3 @@
-// @ts-nocheck
 "use client"
 import React, {useState, useEffect} from 'react'
 import Image from 'next/image';
@@ -6,6 +5,7 @@ import ProjectSlider from '@/components/projectSlider/ProjectSlider';
 import { getProjectDetails } from '@/lib/actions/projectActions';
 import Loader from '@/components/loader/Loader';
 import './styles.css';
+import { PortfolioProjectInterface } from '@/lib/types';
 
 interface Props{
   params : any;
@@ -13,8 +13,8 @@ interface Props{
 
 const Project = ({params}:Props) => {
   const {id:ProjectId} = params;
-  const [contentDetails, setContentDetails] = useState(null);
-  const [sliderImages, setSliderImages] = useState([])
+  const [contentDetails, setContentDetails] = useState<PortfolioProjectInterface | null>(null);
+  const [sliderImages, setSliderImages] = useState<any>([])
 
  useEffect(()=>{
   async function projectDetails(id:string){
