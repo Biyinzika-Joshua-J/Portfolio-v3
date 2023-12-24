@@ -20,17 +20,17 @@ export default function Home() {
             <div className=" lg:h-[90vh] lg:flex hidden flex-col justify-center">
               <h1 className="lg:text-7xl pb-4">Biyinzika Joshua</h1>
               <p className="lg:text-2xl text-gray-400">
-                Frontend Developer passionate about build user interfaces {" "}
-                that <span className="text-primary font-bold">convert</span>!
+                Frontend Developer passionate about build user interfaces that{" "}
+                <span className="text-primary font-bold">convert</span>!
               </p>
             </div>
-            <div className=" lg:h-[90vh]">
+            <div className=" lg:h-[90vh] flex items-center">
               <Image
                 alt="Joshua smiling"
                 src={"/assets/images/joshua.png"}
-                height={200}
-                width={200}
-                className="h-1/2 w-1/2 rounded-full object-contain"
+                height={300}
+                width={300}
+                className="h-[70%] w-[70%] rounded-full object-contain"
               />
             </div>
             <div className="lg:hidden text-center bg-black text-white py-4 flex flex-col justify-center">
@@ -43,7 +43,7 @@ export default function Home() {
           </div>
         </div>
         <div>
-          <SocialIcons/>
+          <SocialIcons />
         </div>
       </div>
 
@@ -66,23 +66,24 @@ export default function Home() {
         </div>
         <div className="pt-6">
           <p className="lg:text-3xl text-2xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
-            dolore doloribus quod itaque deserunt at iste aspernatur atque!
-            Neque, sint aliquid culpa pariatur ipsum possimus eligendi enim
-            officia voluptas beatae ad odit voluptatibus animi unde totam odio
-            dicta aperiam. Magnam ea culpa eius beatae nobis veritatis tempora
-            nisi? Ea vero porro maiores aut praesentium numquam cumque rem
-            impedit, nisi explicabo, voluptatum distinctio. Maiores molestiae
-            similique delectus eos ipsam accusantium architecto pariatur
-            quisquam, doloremque necessitatibus, fuga dolorem rerum
-            reprehenderit officia explicabo excepturi. Consequuntur modi dolorem
-            alias unde illum sapiente dignissimos corrupti eius. Dolor tenetur
-            architecto consequatur sapiente enim animi aperiam explicabo?
+            Hi👋, I'm Biyinzika Joshua from Uganda. 🌍💻 Computer science and
+            Chess are not just my professions; they're my passions. In 2020,
+            amidst the global lockdown, I ventured into coding.
+            Fast forward a year later, I took on some freelance gigs, and boy,
+            did they 10x my growth as a developer. 💼💡 By the end of 2021, I
+            found my calling in frontend development. There's something magical about building user
+            interfaces that resonates with me. ✨ Of course, I dabble in backend
+            development too, with Python and Django, and I'm currently learning
+            Express js. 🐍🚀 Thanks for taking the time to visit my website! If you're curious to dive deeper into my journey,
+            feel free to follow the link below. Let's connect on Linkedin also!! 🚀🔗
           </p>
         </div>
         <div className="mt-10">
-        <Link className="bg-black text-white py-4 px-4 text-2xl mt-10" href={"/journey"}>
-           My Journey{" "}
+          <Link
+            className="bg-black text-white py-4 px-4 text-2xl mt-10"
+            href={"/journey"}
+          >
+            My Journey{" "}
             <FontAwesomeIcon className="ml-4" icon={faArrowRight} size="lg" />
           </Link>
         </div>
@@ -91,10 +92,13 @@ export default function Home() {
       {/*projects section*/}
       <section className="my-36" id="projects">
         <div className="">
-         <ProjectsList count={3} />
+          <ProjectsList count={3} />
         </div>
         <div className="pt-36 flex items-center justify-center">
-          <Link className="bg-black text-white py-4 px-4 text-2xl mt-10" href={"/projects"}>
+          <Link
+            className="bg-black text-white py-4 px-4 text-2xl mt-10"
+            href={"/projects"}
+          >
             See more Projects{" "}
             <FontAwesomeIcon className="ml-4" icon={faArrowRight} size="lg" />
           </Link>
