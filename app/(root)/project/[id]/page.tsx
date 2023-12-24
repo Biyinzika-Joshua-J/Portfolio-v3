@@ -30,7 +30,7 @@ const Project = ({params}:Props) => {
   projectDetails(ProjectId);
  }, []);
 
- console.log(contentDetails)
+// console.log(contentDetails)
 
   return (
     <div>

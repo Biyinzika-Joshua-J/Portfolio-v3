@@ -2,13 +2,14 @@
 import React, { useEffect, useState } from "react";
 import { getProjectDetails } from "@/lib/actions/projectActions";
 import EditProjectForm from "@/components/EditProjectForm/EditProjectForm";
+import { PortfolioProjectInterface } from "@/lib/types";
 
 interface Props {
   params: any;
 }
 
 const EditProject = ({ params }: Props) => {
-  const [project, setProject] = useState(null);
+  const [project, setProject] = useState<PortfolioProjectInterface | null>(null);
   const { id: ProjectId } = params;
 
   useEffect(() => {
