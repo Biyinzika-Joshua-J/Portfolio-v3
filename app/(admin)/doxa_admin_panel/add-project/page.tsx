@@ -1,6 +1,13 @@
 "use client"
 import React from 'react'
-import AddProjectForm from '@/components/AddProjectForm/AddProjectForm';
+// import AddProjectForm from '@/components/AddProjectForm/AddProjectForm';
+
+import dynamic from 'next/dynamic';
+
+const AddProjectForm = dynamic(() => import('@/components/AddProjectForm/AddProjectForm'), {
+  ssr: false, // Disable server-side rendering
+});
+
 
 
 

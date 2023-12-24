@@ -1,7 +1,12 @@
 "use client"
 import React, {useState, useEffect} from 'react'
-import Editor from '../editor/Editor'
+// import Editor from '../editor/Editor'
 import { addProject } from '@/lib/actions/projectActions'
+import dynamic from 'next/dynamic';
+
+const Editor = dynamic(() => import('../editor/Editor'), {
+  ssr: false, // Disable server-side rendering
+});
 
 const AddProjectForm = () => {
   // states
