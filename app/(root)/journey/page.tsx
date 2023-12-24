@@ -293,7 +293,7 @@ const page = () => {
   return (
     <main className="mt-20 max-w-6xl mx-auto">
       <div className="w-full  bg-gray-200">
-        <VerticalTimeline animate={true} animateDirection="bottom">
+        <VerticalTimeline animate={true} >
           {events.map((event, index) => (
             <VerticalTimelineElement
               icon={event.icon ? <event.icon /> : <SvgIcons />}
@@ -301,8 +301,6 @@ const page = () => {
               key={index}
               date={event.date}
               iconStyle={{ background: "rgb(0,0,0)", color: "#fff" }}
-              animate={true}
-              animation={"fade-in"}
               contentStyle={{ background: "rgb(0, 0, 0)", color: "#fff" }}
               contentArrowStyle={{
                 borderRight: "7px solid  rgb(0, 0, 0)",
