@@ -1,4 +1,3 @@
-// @ts-nocheck
 "use client"
 import React, {useState, useEffect} from 'react'
 import ProjectCard from '../cards/ProjectCard/ProjectCard';
