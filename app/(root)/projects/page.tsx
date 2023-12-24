@@ -10,7 +10,7 @@ const page = () => {
     <main className="max-w-6xl mx-auto">
         <div className="my-20">
           <div className="mb-10">
-            <h1 className="text-3xl font-bold">All Projects</h1>
+            <h1 className="lg:text-3xl text-3xl font-bold text-textColor">All Projects</h1>
           </div>
           <div className="">
           <ProjectsList  />

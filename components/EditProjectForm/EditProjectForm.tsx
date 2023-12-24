@@ -59,7 +59,7 @@ const EditProjectForm = ({projectData}:Props) => {
     const project = await updateProject(idValue, data);
     if (project){
         // ... successfull
-        window.location.href = '/admin';
+        window.location.href = '/doxa_admin_panel';
     }else{
         // ...
     }

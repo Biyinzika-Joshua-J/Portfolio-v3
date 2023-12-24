@@ -48,73 +48,73 @@ const Project = ({params}:Props) => {
         <div className="absolute top-0 left-0 w-full h-full opacity-30 bg-black">
         </div>
         <div className="absolute top-0 left-0 w-full flex h-full justify-center items-center">
-          <h1 className="text-7xl font-bold text-white">{contentDetails.title}</h1>
+          <h1 className="lg:text-7xl text-5xl font-bold text-gray-50">{contentDetails.title}</h1>
         </div>
       </section>
       <section className="">
         <div className="mb-10">
           <div className="">
-              <h2 className="lg:text-7xl text-6xl">Overview</h2>
+              <h2 className="lg:text-7xl text-5xl text-textColor">Overview</h2>
           </div>
-          <div className="py-4" dangerouslySetInnerHTML={{__html:contentDetails.overview}}>
+          <div className="py-4 text-gray-400" dangerouslySetInnerHTML={{__html:contentDetails.overview}}>
               
           </div>
         </div>
         <div className="my-10">
           <div className="">
-              <h2 className="lg:text-7xl text-6xl">Features</h2>
+              <h2 className="lg:text-7xl text-5xl text-textColor">Features</h2>
           </div>
-          <div className="py-4" dangerouslySetInnerHTML={{__html:contentDetails.features}}>
+          <div className="py-4 text-gray-400" dangerouslySetInnerHTML={{__html:contentDetails.features}}>
               
           </div>
         </div>
         <div className="my-10">
           <div className="">
-              <h2 className="lg:text-7xl text-6xl">Tech Stack</h2>
+              <h2 className="lg:text-7xl text-5xl text-textColor">Tech Stack</h2>
           </div>
-          <div className="py-4"  dangerouslySetInnerHTML={{__html:contentDetails.techStack}}>
+          <div className="py-4 text-gray-400"  dangerouslySetInnerHTML={{__html:contentDetails.techStack}}>
               
           </div>
         </div>
         <div className="my-10">
           <div className="">
-              <h2 className="lg:text-7xl text-6xl">Challenges and Solutions</h2>
+              <h2 className="lg:text-7xl text-5xl text-textColor">Challenges and Solutions</h2>
           </div>
-          <div className="py-4" dangerouslySetInnerHTML={{__html:contentDetails.challengesAndSolutions}}>
+          <div className="py-4 text-gray-400" dangerouslySetInnerHTML={{__html:contentDetails.challengesAndSolutions}}>
               
           </div>
         </div>
        
         <div className="my-10">
           <div className="">
-              <h2 className="lg:text-7xl text-6xl">Screenshots and Demos</h2>
+              <h2 className="lg:text-7xl text-5xl text-textColor">Screenshots and Demos</h2>
           </div>
-          <div className="py-4">
+          <div className="py-4 text-gray-400">
               <ProjectSlider images={sliderImages}/>
           </div>
         </div>
         <div className="my-10">
           <div className="">
-              <h2 className="lg:text-7xl text-6xl">User Experience</h2>
+              <h2 className="lg:text-7xl text-5xl text-textColor">User Experience</h2>
           </div>
-          <div className="py-4" dangerouslySetInnerHTML={{__html:contentDetails.userExperience}}>
+          <div className="py-4 text-gray-400" dangerouslySetInnerHTML={{__html:contentDetails.userExperience}}>
               
           </div>
         </div>
         <div className="my-10">
           <div className="">
-              <h2 className="lg:text-7xl text-6xl">Project Links</h2>
+              <h2 className="lg:text-7xl text-5xl text-textColor">Project Links</h2>
           </div>
-          <div className="py-4" dangerouslySetInnerHTML={{__html:contentDetails.projectLinks}}>
+          <div className="py-4 text-gray-400" dangerouslySetInnerHTML={{__html:contentDetails.projectLinks}}>
               
           </div>
         </div>
         
         <div className="my-10">
           <div className="">
-              <h2 className="lg:text-7xl text-6xl">Lessons Learned</h2>
+              <h2 className="lg:text-7xl text-5xl text-textColor">Lessons Learned</h2>
           </div>
-          <div className="py-4" dangerouslySetInnerHTML={{__html:contentDetails.lessonsLearned}}>
+          <div className="py-4 text-gray-400" dangerouslySetInnerHTML={{__html:contentDetails.lessonsLearned}}>
               
           </div>
         </div>

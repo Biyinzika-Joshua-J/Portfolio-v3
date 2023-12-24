@@ -173,55 +173,55 @@ const events = [
     date: "March 2020",
     title: "I Started Learning C",
     description:
-      "Embarked on the challenging journey of learning C. It got tough, and I hit pause for a bit.",
+      "My Journey starts with learning C. It got tough, and I hit pause for a bit 🤯💤.",
     icon: CLangIcon,
   },
   {
     date: "May 2020",
     title: "Switching to HTML, CSS, and JS",
     description:
-      "Resumed the coding adventure, but this time switched gears to HTML, CSS, and JS. The catch? No computer! I coded on my trusty Samsung tablet, building pages and proving that we all start somewhere.",
+      "Resumed 💪 the coding adventure 🌐, but this time switched gears to HTML, CSS, and JS. The catch? No computer! I coded on my trusty Samsung tablet, building pages and proving that we all start somewhere.",
   },
   {
     date: "June 2020",
     title: "Got a Real Computer!",
     description:
-      "Finally bid farewell to the tablet and welcomed a real computer into my life. Coding on a tablet? Let's just say it sucks!",
+      "👋🖥️ Finally bid farewell to the tablet and welcomed a real computer into my life. Coding on a tablet? Let's just say it sucks!",
     icon: ComputerIcon,
   },
   {
     date: "August 2020",
     title: "First local Freelance Gig",
     description:
-      "Celebrated my first freelance gig! Crafted a website for one of my Aunties' craft shoe shop. The euphoria of putting something on the internet was unforgettable, even if looking back makes me cringe a bit.",
+      "Celebrated 🎉 my first freelance gig! Crafted a website for one of my Aunties' craft shoe shop. The euphoria of putting something on the internet was unforgettable, even if looking back makes me cringe a bit.😅",
     icon: DollarIcon,
   },
   {
     date: "November 2020",
     title: "Joining Upwork",
     description:
-      "Launched an Upwork account after eight months of honing my skills. Getting a slice of the freelance pie on Upwork was no walk in the park!",
+      "🚀 Created an Upwork account after eight months of honing my skills. Getting a slice of the freelance pie on Upwork was no walk in the park!",
       icon: UpworkIcon,
   },
   {
     date: "February 2021",
     title: "First Freelance Client",
     description:
-      "Scored my first freelance client. The joy was unparalleled, but the reality hit hard—I was about to build a full-stack app without a clue about client-server architecture. Uff!",
+      "I landed 🤝 my first freelance client. The joy was unparalleled, but the reality hit hard—I was about to build a full-stack app without a clue about client-server architecture. Uff!!🤯",
     icon: UpworkIcon,
   },
   {
     date: "September 2021",
     title: "End of Freelance Contract",
     description:
-      "End of my baptism-by-fire freelance contract. Grueling months of 10-hour days, Monday to Sunday. I consider it my initiation into the industry by fire.",
+      "End of my baptism-by-fire freelance contract. Grueling months of 10-hour days, Monday to Sunday. I consider it my initiation into the industry by fire.🔥🔥",
       icon: UpworkIcon,
   },
   {
     date: "October 2021",
     title: "Diving into React and Next JS",
     description:
-      "Dived into React and Next JS. Invested part of my earnings into courses after a 2000-line Vanilla JS file in a previous freelance gig made me wonder why I hadn't discovered React earlier.",
+      "Dived into React and Next JS 📚📚. Invested part of my earnings into courses after a 2000-line Vanilla JS file in a previous freelance gig made me wonder why I hadn't discovered React earlier.",
       icon:ReactIcon,
   },
   {
@@ -240,30 +240,30 @@ const events = [
   },
   {
     date: "August 2022",
-    title: "Starting a Blog",
+    title: "Started a Blog",
     description:
-      "Launched my blog - soarwithcode.com. Realized the power of sharing knowledge and experiences. Consistency? Well, still getting my act together - don't judge me!",
+      "Launched my blog - soarwithcode.com. Realized the power of sharing knowledge and experiences. Consistency? Well, still getting my act together - don't judge me! 😅",
     icon: BlogIcon,
   },
   {
     date: "October 2022",
     title: "Joining the University of London",
     description:
-      "Joined the University of London. A life-changing decision, contrary to my previous resistance to the idea of Uni.",
+      "Joined the University of London. A life-changing decision, contrary to my previous resistance to the idea of Uni 🎓🎓.",
       icon:UniversityIcon,
   },
   {
     date: "November 2022",
     title: "Bible College Graduation",
     description:
-      "Graduated from Bible college. Thankful for the two years of studying biblical studies.",
+      "Graduated 🎓 from Bible college. Thankful 🙏 🙏 for the two years of studying biblical studies.",
       icon: BibleIcon,
   },
   {
     date: "April 2023",
     title: "First Internship",
     description:
-      "Kicked off my first internship, coding 10 solid hours a day, six days a week. Crazy hard, but I grew to love it.",
+      "Kicked off my first internship, coding 👨‍💻 9 solid hours a day, six days a week. Crazy hard, but I grew to love it 😅.",
       icon: PinniSoftIcon,
   },
   {
@@ -277,7 +277,7 @@ const events = [
     date: "July 2023",
     title: "Volunteering as a Frontend Developer",
     description:
-      "Started volunteering as a Frontend developer for 8billionminds, a company aiming to connect the globe through knowledge. Because sometimes, life isn't just about the exchange of time and money—it's about volunteering!",
+      "Started volunteering as a Frontend developer for 8billionminds, a company aiming to connect the globe through knowledge 🌍. Because sometimes, life isn't just about the exchange of time and money—it's about volunteering! 🙌",
     icon : VolunteerIcon,
   },
   {
@@ -291,20 +291,20 @@ const events = [
     date: "November 2023",
     title: "Started building frontAcer",
     description:
-      "Frontend interviews can be a challenge to prepare for - so I decided to build a platform to help frontend developers with the prep.. Amazing stuff!!",
+      "Frontend interviews can be a challenge to prepare for - so I decided to build a platform to help frontend developers with the prep.. Amazing stuff!! 💪💪",
       icon : VolunteerIcon,
   },
   {
     date: "December 2023",
     title: "Started tutoring frontend development",
     description:
-      "About this time, I got someone reach out with the desire to learn frontend development. The best way to level up in any skill is to teach it.. It has been a great journey.",
+      "About this time, I got someone reach out with the desire to learn frontend development. The best way to level up in any skill is to teach it 👨‍🏫.. It has been a great journey.",
   },
   {
     date: "January 2024",
     title: "Started writing on Medium",
     description:
-      "I strive to teach everything that I know, after-all, we don't teach because we are experts!! I started writing about frontend development and computer science on medium and I am optimistic!!",
+      "I strive to teach everything that I know, after-all, we don't teach because we are experts!! I started writing 📝about frontend development and computer science on medium and I am optimistic!!",
       icon : WritingIcon,
   },
 ];

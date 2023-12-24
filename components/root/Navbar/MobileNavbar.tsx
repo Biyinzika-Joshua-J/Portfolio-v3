@@ -23,7 +23,7 @@ const MobileNavbar = ({ open, setOpen }:Props<boolean>) => {
   return (
     <div
       style={open ? { ...openedStyles } : { ...closedStyles }}
-      className={` transition-all ease-in-out duration-[2s] flex justify-center items-center -z-50 fixed h-[100vh] bg-[#699ad1] w-[100%] top-0 left-0`}
+      className={`z-50 transition-all ease-in-out duration-[2s] flex justify-center items-center fixed h-[100vh] bg-[#000] w-[100%] top-0 left-0`}
     >
       <ul className="text-center">
         {
@@ -31,8 +31,8 @@ const MobileNavbar = ({ open, setOpen }:Props<boolean>) => {
             <li key={idx} className="my-8 text-3xl text-white font-bold">
             <Link
               onClick={() => setOpen(false)}
-              className="transition-all duration-200 ease-in-out hover:text-[#f38039]"
-              href={`${link.route}`}
+              className="transition-all duration-200 ease-in-out hover:text-gray-400"
+              href={`/${link.route}`}
             >
               {link.text}
             </Link>

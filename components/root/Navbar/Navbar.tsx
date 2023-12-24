@@ -38,7 +38,9 @@ const Navbar = () => {
           <div className="flex justify-between items-center">
             <div className="">
               <Link href={"/"}>
-                <span className="text-3xl lg:text-5xl">
+                <span className={`text-3xl lg:text-5xl   ${
+          changeColor ? " text-white": "text-textColor"
+        }`}>
                   Joshua
                   <span className="font-extrabold text-4xl text-primary">
                     .
@@ -50,14 +52,16 @@ const Navbar = () => {
               {NavbarLinks.map((linkItem, idx) => (
                 <Link
                   href={`/${linkItem.route}`}
-                  className="capitalize ml-8 text-2xl"
+                  className={`${
+                    changeColor ? " text-gray-300 hover:text-gray-100": "text-gray-400 hover:text-gray-900"
+                  } capitalize ml-8 text-2xl text-gray-400 `}
                   key={idx}
                 >
                   {linkItem.text}
                 </Link>
               ))}
             </div>
-            <div className="lg:hidden block">
+            <div className="lg:hidden block z-[100]">
               <Hamburger open={open} onClick={() => handleOpen()} />
             </div>
           </div>

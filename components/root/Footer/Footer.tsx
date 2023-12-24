@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="mx-auto max-w-6xl w-[85%] flex justify-between items-center md:flex-row flex-col">
         <div className="">
           <div className="">
-            <span className="lg:text-2xl text-xl">
+            <span className="lg:text-2xl text-xl text-textColor">
               I'm currently available to work on a new project. <br/> Kindly{" "}
               <span className="text-indigo-700">
                 <Link href={"mailto:joshuabiyinzika22@gmail.com"}>

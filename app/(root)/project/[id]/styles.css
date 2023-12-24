@@ -11,13 +11,13 @@ p{
 
 ul {
     list-style-type: circle; /* You can change 'square' to 'disc', 'circle', etc. */
-    color: black; 
+    color: rgb(156 163 175); 
   }
 
   
   ol {
     list-style-type: decimal; /* You can change 'decimal' to 'lower-roman', 'upper-roman', etc. */
-    color: black;
+    color: rgb(156 163 175);
   }
 
  

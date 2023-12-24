@@ -39,7 +39,7 @@ const page = () => {
           Available Projects
         </h1>
         <div className="text-center">
-          <Link className="bg-black p-2 text-white" href={"/admin/add-project"}>
+          <Link className="bg-black p-2 text-white" href={"/doxa_admin_panel/add-project"}>
             Add Project
           </Link>
         </div>
@@ -60,7 +60,7 @@ const page = () => {
                   </div>
                   <div className="mr-4">
                     <Link
-                      href={`/admin/edit-project/${project.id}`}
+                      href={`/doxa_admin_panel/edit-project/${project.id}`}
                       className="bg-black text-white py-2 px-4"
                     >
                       <FontAwesomeIcon icon={faPenToSquare} size="xl" />

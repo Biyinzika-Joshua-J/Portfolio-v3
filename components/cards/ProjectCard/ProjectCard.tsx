@@ -20,17 +20,17 @@ const ProjectCard = ({ id, name, description, images, bgColor, index, liveLink }
   return (
     <div key={id} className={`${index===0?'mt-0':'mt-52'}`}>
       <div className="">
-        <h1 className="lg:text-7xl text-6xl pb-6">{name}</h1>
-        <p className="md:w-[50%] w-[90%]  pb-6 lg:text-3xl text-2xl">
+        <h1 className="lg:text-7xl text-6xl pb-6 text-textColor">{name}</h1>
+        <p className="md:w-[50%] w-[90%]  pb-6 lg:text-3xl text-2xl text-gray-400">
             {description}
         </p>
         <div className="pb-6">
             <Link target="__blank" href={liveLink} className="">
                 <FontAwesomeIcon icon={faChevronRight} size="lg"/>
-                <span className="ml-6 text-2xl">View Project</span>
+                <span className="ml-6 text-2xl text-textColor">View Project</span>
             </Link>
             <Link target="__blank" href={`/project/${id}`} className="">
-                <span className="ml-6 text-2xl">View Details</span>
+                <span className="ml-6 text-2xl text-textColor">View Details</span>
             </Link>
         </div>
       </div>
