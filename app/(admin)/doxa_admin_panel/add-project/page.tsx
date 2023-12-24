@@ -1,11 +1,8 @@
 "use client"
 import React from 'react'
-import dynamic from 'next/dynamic'
 import AddProjectForm from '@/components/AddProjectForm/AddProjectForm';
 
-const Editor = dynamic(()=>import("@/components/editor/Editor"), {
-  ssr:false,
-});
+
 
 const page = () => {
   return (
