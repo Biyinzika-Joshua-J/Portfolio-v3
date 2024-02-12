@@ -21,7 +21,7 @@ const SocialIcons = () => {
           <Tooltip id="email" />
             <FontAwesomeIcon icon={faEnvelope} className="text-4xl text-textColor" />
           </Link>
-          <Link className="" target='__blank' href={"https://soarwithcode.com/"} data-tooltip-id="blog" data-tooltip-content="Check out my blog">
+          <Link className="" target='__blank' href={"https://medium.com/@joshuabiyinzika22"} data-tooltip-id="blog" data-tooltip-content="Check out my blog">
           <Tooltip id="blog" />
             <FontAwesomeIcon icon={faGlobe} className="text-4xl text-textColor" />
           </Link>
