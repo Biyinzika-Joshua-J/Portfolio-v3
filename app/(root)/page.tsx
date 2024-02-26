@@ -76,9 +76,9 @@ export default function Home() {
               with React.js.
             </p>
 
-            <p>And now for the rest of us who can bear reading long easys:</p>
+            <p>And now for the rest of us who can sit through long essays:</p>
 
-            <p>Of course you know my name from the header section.</p>
+            <p>Don't know my name? Scroll to the top of this page.😊</p>
 
             <p>Currently based in Kampala/Uganda.🌍</p>
 
