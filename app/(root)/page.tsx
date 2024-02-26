@@ -18,9 +18,11 @@ export default function Home() {
         <div className="flex-1">
           <div className="grid lg:grid-cols-2 grid-cols-1 lg:h-[90vh]">
             <div className=" lg:h-[90vh] lg:flex hidden flex-col justify-center">
-              <h1 className="lg:text-7xl pb-4 text-textColor">Biyinzika Joshua</h1>
+              <h1 className="lg:text-7xl pb-4 text-textColor">
+                Biyinzika Joshua
+              </h1>
               <p className="lg:text-2xl text-gray-400">
-               I transform UX designs into amazing{" "}
+                I transform UX designs into amazing{" "}
                 <span className="text-primary font-bold">UIs</span>!!!
               </p>
             </div>
@@ -36,8 +38,8 @@ export default function Home() {
             <div className="lg:hidden text-center bg-black mt-20 text-white py-4 flex flex-col justify-center">
               <h1 className="md:text-4xl text-4xl pb-4">Biyinzika Joshua</h1>
               <p className="text-2xl text-gray-300">
-                I transform UX designs into <br />{" "}
-                Amazing <span className="text-primary font-bold">UIs</span>!!
+                I transform UX designs into <br /> Amazing{" "}
+                <span className="text-primary font-bold">UIs</span>!!
               </p>
             </div>
           </div>
@@ -65,20 +67,54 @@ export default function Home() {
           <h1 className="lg:text-7xl text-6xl text-textColor">About Me</h1>
         </div>
         <div className="pt-6">
-          <p className="lg:text-3xl text-2xl text-gray-400">
-            Hi👋, I'm Biyinzika Joshua from Uganda 🌍. Computer science 💻 and
-            Chess are not just my professions; they're my passions. In 2020,
-            amidst the global lockdown, I started coding.
-            Fast forward a year later, I took on some freelance gigs, and boy,
-            did they 10x my growth as a developer. 💡 By the end of 2021, I
-            found my calling in frontend development. There's something magical about building user
-            interfaces that resonates with me. ✨ Of course, I dabble in backend
-            development too, with Python 🐍 and Django, and I'm currently learning
-            Express js. 🚀 Thanks for taking the time to visit my website! If you're curious to dive deeper into my journey,
-            feel free to follow the link below. Let's connect on Linkedin also!! 🚀🔗
-          </p>
+          <div className="about lg:text-3xl text-2xl text-gray-400">
+            <p>Hey there👋!</p>
+            <p>For the TL;DR peeps:</p>
+
+            <p>
+              👉 I'm a frontend developer who loves to build user interfaces
+              with React.js.
+            </p>
+
+            <p>And now for the rest of us who can bear reading long easys:</p>
+
+            <p>Of course you know my name from the header section.</p>
+
+            <p>Currently based in Kampala/Uganda.🌍</p>
+
+            <p>Not your average frontend developer:</p>
+
+            <p>- I do backend also with Python and Django.🐍</p>
+
+            <p>- I'm a Kravist aka. I practice Krav Maga.🥋</p>
+
+            <p>Facts:</p>
+
+            <p>- Started coding in march of 2020.</p>
+
+            <p>- I can center a div.</p>
+
+            <p>- I use React js & Next js to build user interfaces.</p>
+
+            <p>- I suck at design, so I absolutely adore the UX folks.</p>
+
+            <p>
+              - I write about tech and a soon to be author of "Unsh*t your Git".
+            </p>
+
+            <p>- Plus, I think I'm quirky.</p>
+
+            <p>I'm always down to connect and explore new opportunities.</p>
+
+            <p>Feel free to shoot me a DM and say hi :)</p>
+
+            <p>And you're SO welcome 😊</p>
+
+            <p>Joshua✌️</p>
+          </div>
         </div>
-        <div className="mt-10">
+
+        {/*<div className="mt-10">
           <Link
             className="bg-black text-white py-4 px-4 text-2xl mt-10"
             href={"/journey"}
@@ -86,7 +122,7 @@ export default function Home() {
             My Journey{" "}
             <FontAwesomeIcon className="ml-4" icon={faArrowRight} size="lg" />
           </Link>
-        </div>
+  </div>*/}
       </section>
 
       {/*projects section*/}
